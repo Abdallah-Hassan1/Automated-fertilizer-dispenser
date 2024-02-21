@@ -2,6 +2,12 @@
 
 ### Understanding the Code:
 
+In this pioneering initiative, we're simulating the traditional Automated Fertilizer Dispenser with a sophisticated watering system.
+<br />
+Each sensor is carefully tailored to its corresponding function, showcasing a novel approach to plant care and nurturing.
+<br />
+<br />
+
 1. **Initialization:**
 
    - The code commences by setting up required libraries and components.
@@ -43,56 +49,56 @@
 2. **Software Setup:**
    To upload the provided Arduino code to the Arduino board, follow these steps:
 
-   1. Download the project code from the provided [GitHub repository](https://github.com/Abdallah-Hassan1/Automated-fertilizer-dispenser).
+   - Download the project code from the provided [GitHub repository](https://github.com/Abdallah-Hassan1/Automated-fertilizer-dispenser).
 
-   2. Launch Arduino IDE:
+   - Launch Arduino IDE:
 
-      - If you haven't installed the Arduino IDE yet, you can download it from the official Arduino website and follow the installation instructions. Alternatively, if you're using Windows OS, you can also find it in the Microsoft Store.
+     - If you haven't installed the Arduino IDE yet, you can download it from the official Arduino website and follow the installation instructions. Alternatively, if you're using Windows OS, you can also find it in the Microsoft Store.
 
-   3. Connect Arduino Board:
+   - Connect Arduino Board:
 
-      - Plug your Arduino board into your computer using a USB cable. Ensure that the connection is secure and that your computer recognizes the board.
+     - Plug your Arduino board into your computer using a USB cable. Ensure that the connection is secure and that your computer recognizes the board.
 
-   4. Select Board and Port:
+   - Select Board and Port:
 
-      - Within the Arduino IDE, navigate to the _Tools_ menu.
-      - Under the _Board_ submenu, choose the appropriate Arduino board model you're working with (e.g., Arduino Uno, Arduino Mega).
-      - Next, under the _Port_ submenu, select the serial port to which your Arduino board is connected. On Windows, it's typically listed as COMx, while on macOS, it's usually displayed as /dev/cu.usbmodemXXXX.
+     - Within the Arduino IDE, navigate to the _Tools_ menu.
+     - Under the _Board_ submenu, choose the appropriate Arduino board model you're working with (e.g., Arduino Uno, Arduino Mega).
+     - Next, under the _Port_ submenu, select the serial port to which your Arduino board is connected. On Windows, it's typically listed as COMx, while on macOS, it's usually displayed as /dev/cu.usbmodemXXXX.
 
-   5. Open Code File:
+   - Open Code File:
 
-      - Open the provided Arduino code file (.ino file) in the Arduino IDE. You can do this by locating the file on your computer and double-clicking it, or simply drag and drop the file into the Arduino IDE window.
+     - Open the provided Arduino code file (.ino file) in the Arduino IDE. You can do this by locating the file on your computer and double-clicking it, or simply drag and drop the file into the Arduino IDE window.
 
-   6. Upload Code:
+   - Upload Code:
 
-      - Once you've verified that the code doesn't contain any errors, you can proceed to upload it to the Arduino board.
-      - Click on the "Upload" button within the Arduino IDE. During the upload process, you may see status messages in the console indicating the progress of the upload.
+     - Once you've verified that the code doesn't contain any errors, you can proceed to upload it to the Arduino board.
+     - Click on the "Upload" button within the Arduino IDE. During the upload process, you may see status messages in the console indicating the progress of the upload.
 
-   7. Verify Operation:
+   - Verify Operation:
 
-      - Check the serial monitor within the Arduino IDE to ensure that the sensor values are changing as expected. This step helps confirm that the code is functioning correctly and interacting with the connected sensors appropriately.
+     - Check the serial monitor within the Arduino IDE to ensure that the sensor values are changing as expected. This step helps confirm that the code is functioning correctly and interacting with the connected sensors appropriately.
 
 3. **Setting Up Local Database:**
 
    To enhance visual representation of sensor data and gain immediate insights into soil conditions, utilize an Excel database sheet with the following steps:
 
-     1. Begin by creating a new Excel sheet file locally on the desktop where you're connecting the Arduino.
-     2. If the Data Streamer feature isn't visible, follow these steps:
+   - Begin by creating a new Excel sheet file locally on the desktop where you're connecting the Arduino.
+   - If the Data Streamer feature isn't visible, follow these steps:
 
-        1. Navigate to _File_ > _Options_ > _Add-ins_.
-        2. Under the _Manage_ selector, choose _COM Add-ins_, then click _Apply_.
-        3. Ensure the _Microsoft Data Streamer For Excel_ option is selected in the COM Add-ins pop-up, then click _OK_.
-        4. You may need to refresh the file, close, and reopen it to activate the Data Streamer tab.
-        5. Once activated, the Data Streamer tab should be accessible.
+     - Navigate to _File_ > _Options_ > _Add-ins_.
+     - Under the _Manage_ selector, choose _COM Add-ins_, then click _Apply_.
+     - Ensure the _Microsoft Data Streamer For Excel_ option is selected in the COM Add-ins pop-up, then click _OK_.
+     - You may need to refresh the file, close, and reopen it to activate the Data Streamer tab.
+     - Once activated, the Data Streamer tab should be accessible.
 
-     3. Connect your Arduino device to the laptop.
-     4. Within the Data Streamer tab, click on the _Advanced_ button, then select _Settings_.
-     5. Confirm that the COM Port and Baud Rate match those of the connected Arduino.
-     6. To begin receiving data, click on _Connect a Device_, choose the correct port, and click on _Start Data_ to initiate data transmission from the connected Arduino.
-     7. Now, sensor data will be visible in Excel, allowing you to represent it graphically by following these steps:
+   - Connect your Arduino device to the laptop.
+   - Within the Data Streamer tab, click on the _Advanced_ button, then select _Settings_.
+   - Confirm that the COM Port and Baud Rate match those of the connected Arduino.
+   - To begin receiving data, click on _Connect a Device_, choose the correct port, and click on _Start Data_ to initiate data transmission from the connected Arduino.
+   - Now, sensor data will be visible in Excel, allowing you to represent it graphically by following these steps:
 
-        1. Select the desired data for graphical representation, including columns and rows.
-        2. Click on _Insert_, then choose the desired graph type for visualization purposes.
+     - Select the desired data for graphical representation, including columns and rows.
+     - Click on _Insert_, then choose the desired graph type for visualization purposes.
 
 4. **Operation:**
 
