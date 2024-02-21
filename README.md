@@ -10,21 +10,22 @@
 
 2. **Execution Process:**
 
-   - The code operates in a continuous loop, executing the following actions:
-     - Requesting temperature readings from the temperature sensor.
-     - Reading moisture levels from the soil moisture sensor.
-     - Acquiring water levels from the water level sensor.
-     - Based on the sensor data and predefined conditions, it adjusts the servo motor's position to regulate water dispensing.
-     - Finally, it outputs sensor readings and servo motor positions to the serial monitor for monitoring and debugging purposes.
+   The code operates in a continuous loop, executing the following actions:
+
+   - Requesting temperature readings from the temperature sensor.
+   - Reading moisture levels from the soil moisture sensor.
+   - Acquiring water levels from the water level sensor.
+   - Based on the sensor data and predefined conditions, it adjusts the servo motor's position to regulate water dispensing.
+   - Finally, it outputs sensor readings and servo motor positions to the serial monitor for monitoring and debugging purposes.
 
 3. **Sensor Data Interpretation:**
 
-   - The code interprets sensor data according to predefined thresholds and conditions:
+   The code interprets sensor data according to predefined thresholds and conditions:
 
-     - pH sensor readings determine the acidity(14-7) or alkalinity(7-0) of water, with values ranging from 0 to 14.
-       When the pH value dips below seven, the water starts to become more acidic. Any number above seven equates to more alkaline.
-     - Water level sensors discern liquid levels in a fixed container that is too high or too low. According to the method of measuring the liquid level, categorized as either contact or non-contact types.
-     - Soil moisture sensors ascertain soil moisture levels, classifying them as disconnected or not in the soil(above 1000), dry(1000-600), humid(600-370), or submerged(less than 370).
+   - pH sensor readings determine the acidity(14-7) or alkalinity(7-0) of water, with values ranging from 0 to 14.
+     When the pH value dips below seven, the water starts to become more acidic. Any number above seven equates to more alkaline.
+   - Water level sensors discern liquid levels in a fixed container that is too high or too low. According to the method of measuring the liquid level, categorized as either contact or non-contact types.
+   - Soil moisture sensors ascertain soil moisture levels, classifying them as disconnected or not in the soil(above 1000), dry(1000-600), humid(600-370), or submerged(less than 370).
 
 4. **Servo Motor Control:**
 
@@ -35,13 +36,12 @@
 
 1. **Hardware Setup:**
 
-   - Connect the temperature sensor, soil moisture sensor, water level sensor, and servo motor to the Arduino board based on the specified pin configurations.
+   Connect the temperature sensor, soil moisture sensor, water level sensor, and servo motor to the Arduino board based on the specified pin configurations.
 
    ![image](https://github.com/Abdallah-Hassan1/Automated-fertilizer-dispenser/assets/64805908/1757bf3f-62c5-4ab6-894d-1cb5ccef5fc3)
 
 2. **Software Setup:**
-
-   - To upload the provided Arduino code to the Arduino board, follow these steps:
+   To upload the provided Arduino code to the Arduino board, follow these steps:
 
    1. Download the project code from the provided [GitHub repository](https://github.com/Abdallah-Hassan1/Automated-fertilizer-dispenser).
 
@@ -74,7 +74,7 @@
 
 3. **Setting Up Local Database:**
 
-   - To enhance visual representation of sensor data and gain immediate insights into soil conditions, utilize an Excel database sheet with the following steps:
+   To enhance visual representation of sensor data and gain immediate insights into soil conditions, utilize an Excel database sheet with the following steps:
 
      1. Begin by creating a new Excel sheet file locally on the desktop where you're connecting the Arduino.
      2. If the Data Streamer feature isn't visible, follow these steps:
