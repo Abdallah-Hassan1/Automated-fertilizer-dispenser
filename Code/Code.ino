@@ -3,6 +3,7 @@
 #include <Servo.h>
 Servo myservo;
 #define ONE_WIRE_BUS 7
+#define relayPin 12
 
 OneWire oneWire(ONE_WIRE_BUS);
 DallasTemperature sensors(&oneWire);
@@ -23,6 +24,7 @@ int pos = 0;
 
 void setup() {
   sensors.begin();
+  pinMode(relayPin, OUTPUT);
   Serial.begin(9600);
   myservo.attach(9);
   myservo.write(0);
@@ -39,24 +41,30 @@ void loop() {
 //  Serial.println((String)"water level: " + waterlevel);
 //  Serial.println("----------------------------------------------------");
 
+  Serial.print(Celsius);
+  Serial.print(", ");
+  Serial.print(Moisture);
+  Serial.print(", ");
+  Serial.println(waterlevel);
+  
     if ( (Celsius > 24 && Celsius < 30) && (Moisture < 370) && (waterlevel > 330) && (PH_Value > 2) ){ 
+      digitalWrite(relayPin, HIGH);
       MoveServo(45);
-      Serial.println("45 degree");
 
   }
   else if ((Celsius > 30 && Celsius < 36) && (Moisture > 370 && Moisture < 600) && (waterlevel > 300 && waterlevel<= 330) && (PH_Value > 4)){ 
+      digitalWrite(relayPin, HIGH);
       MoveServo(90);
-      Serial.println("90 degree");
   }
 
   else if ((Celsius > 36 && Celsius < 40) && (Moisture > 600 && Moisture < 1000) && (waterlevel > 300 && waterlevel<= 330) && (PH_Value > 6)){ 
+      digitalWrite(relayPin, HIGH);
       MoveServo(120);
-      Serial.println("120 degree");
   }
 
   else if ((Celsius > 40) && (waterlevel <= 100) && (PH_Value > 8)){ 
+      digitalWrite(relayPin, HIGH);
       MoveServo(180);
-      Serial.println("180 degree");
   }
 //  delay(500); 
 }
@@ -72,4 +80,5 @@ void MoveServo(int degree){
     myservo.write(pos);              
     delay(15);                       
   }
+  digitalWrite(relayPin, LOW);
 }
