@@ -1,3 +1,4 @@
+![image]([https://github.com/Abdallah-Hassan1/Automated-fertilizer-dispenser/assets/64805908/1757bf3f-62c5-4ab6-894d-1cb5ccef5fc3)
 ## Automated Fertilizer Dispenser Converted to Watering System
 
 ### Understanding the Code:
